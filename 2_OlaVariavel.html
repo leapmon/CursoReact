@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo 2 - Olá Variável em React com JSX</title>
+    <!-- Adiciona React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Adiciona JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const nome = "Variável em React";
+      const elemento = <h1>Olá, {nome}! Seu número é {25+4}.</h1>;
+      ReactDOM.render(
+        elemento,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
