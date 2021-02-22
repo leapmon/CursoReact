@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo 5 - Status com classe</title>
+    <!-- Adiciona React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Adiciona JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Status extends React.Component
+      {
+        render() {
+          return <div>
+                 <h1>Seja bem-vindo, {this.props.nome} - level {this.props.level}</h1>
+                 <h2>{this.props.classe}, {this.props.xp} de XP</h2>
+                 </div>;
+            }
+      }
+      const elemento = <Status nome="Phaet" level="14" classe="Paladino" xp="847" />;
+      ReactDOM.render(
+        elemento,
+        document.getElementById('root')
+      );
+    </script>
+  </body>
+</html>
